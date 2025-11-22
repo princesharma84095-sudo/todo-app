@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taksify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <header>
+            <h1>Taskify</h1>
+        </header>
+        <form id="taskForm" style="margin: 20px 0;">
+            <input 
+              type="text" 
+              id="title" 
+              placeholder="Task title" 
+              required
+              style="padding: 8px; width: 200px;"
+            >
+            
+            <input 
+              type="text" 
+              id="description" 
+              placeholder="Task description" 
+              required
+              style="padding: 8px; width: 300px;"
+            >
+          
+            <button 
+              type="submit"
+              style="padding: 8px 14px; cursor: pointer;"
+            >
+              Add Task
+            </button>
+        </form>
+
+        <main class="board">
+            <!--To Do column-->
+            <section class="column" data-column="todo">
+                <h2>To Do</h2>
+                <div class="tasks"></div>
+            </section>
+
+            <!--Doing column-->
+            <section class="column" data-column="doing">
+                <h2>Doing</h2>
+                <div class="tasks"></div>
+            </section>
+
+            <!--Done column-->
+            <section class="column" data-column="done">
+                <h2>Done</h2>
+                <div class="tasks"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
